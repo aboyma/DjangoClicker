@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <script src="{% static 'js/index.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="utf-8">
+    <title>Кликер</title>
+</head>
+<body onload="getUser({{ request.user.id }})">
+<main>
+    <div align="center">
+        <div class="item_left">
+            <h3>Привет,
+                <div style="display: inline" id="user">%user%</div>
+            </h3>
+            <div class="logout"><a href="/logout">Выйти</a></div>
+            <h3>Баланс:
+                <div style="display: inline" id="data">%coins%</div>
+            </h3>
+            <h3>Сила клика:
+                <div style="display: inline" id="clickPower">%clickPower%</div>
+            </h3>
+            <h3>Сила автоклика:
+                <div style="display: inline" id="autoClickPower"> {{ mainCycle.autoClickPower }} </div>
+                к/с
+            </h3>
+        </div>
+        <div class="item_right">
+            <input type="image" class="click"
+                   src="https://free-png.ru/wp-content/uploads/2021/03/pngwing.com-8-b0e141a0.png"
+                   onclick="callClick()"/>
+        </div>
+    </div>
+    <div class="boost-wrapper" id="boost-wrapper">
+        <div class="boost-holder" id="boost-holder" onclick="BuyBoost(0)">
+            <div class="item-1">
+                <input type="image" style="height: 145px; width: 150px"
+                       src="https://c0.klipartz.com/pngpicture/189/62/gratis-png-rayo-mcqueen-mater-sally-carrera-mundo-de-los-coches-thumbnail.png"/>
+            </div>
+            <div class="item-2">
+                <div class="box-1">
+                    <div>Сила буста:
+                        <div id="boostPower">0</div>
+                    </div>
+                    <div>Цена буста
+                        <div id="boostPrice">10</div>
+                    </div>
+                </div>
+                <div class="box-2">
+                    <div>Уровень буста
+                        <div id="boostLevel" class="">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</body>
+</html>

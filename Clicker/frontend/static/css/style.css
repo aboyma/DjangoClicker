@@ -1,0 +1,57 @@
+.click {
+    height: 200px;
+    opacity: 70%;
+}
+
+.click:hover {
+    opacity: 80%;
+}
+
+.click:active {
+    opacity: 100%;
+}
+
+
+.boost-wrapper {
+    overflow: auto;
+    height: 500px;
+}
+
+
+.boost-holder:hover {
+    opacity: 0.8;
+}
+
+
+.disableboost {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+
+.item_left, .item_right {
+    display: inline-block;
+}
+
+.item_left {
+    padding-right: 100px;
+}
+
+.boost-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.boost-holder {
+    width: 200px;
+    background: #bb5dee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 5px;
+}
